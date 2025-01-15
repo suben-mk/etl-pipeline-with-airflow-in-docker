@@ -5,25 +5,28 @@
 ## Folder Explaination
 ```bash
 etl-pipeline-with-airflow-in-docker/
-├── assets/
-├── cred/
+├── assets/                           # โฟลเดอร์สำหรับเก็บรูปภาพต่างๆ ของโปรเจค
+├── cred/                             # โฟลเดอร์สำหรับเก็บไฟล์ Credential ที่ connection กับ GCP
 │   └── service-account-sbmk.json
 │
-├── dags/
+├── dags/                             # โฟลเดอร์สำหรับเก็บไฟล์โค้ดของ DAGs ในการรัน Data pipeline บน Airflow
 │   └── r2de2_workshop_sbmk.py
 │
-├── data/
-│   ├── r2de2_schema.json
-│   └── r2de2.db
+├── data/                             # โฟลเดอร์สำหรับเก็บไฟล์ข้อมูลที่ใช้สำหรับโปรเจค และผลลัพธ์จากการทำโปรเจค
+│   ├── audible_data_merged.csv       # Raw data exreact from SQLite database (r2de2.db)
+│   ├── audible_data_transformed.csv  # Final data
+│   ├── conversion_rate.csv           # Raw data exreact from API
+│   ├── r2de2_schema.json             # Schema field of final data
+│   └── r2de2.db                      # Retail transaction data
 │
-├── logs/
-├── plugins/
+├── logs/                             # โฟลเดอร์สำหรับเก็บ data logging บน Airflow
+├── plugins/                          # โฟลเดอร์สำหรับ application ต่างๆที่ต้องการรันบน Airflow ผ่าน Dockerfile
 │   ├── Dockerfile
 │   └── requirements.txt
 │
-├── scripts/
+├── scripts/                          # โฟลเดอร์สำหรับเก็บไฟล์โค้ด python function เพิ่มเติมที่จะรันผ่าน Dags
 │   └── slack_client.py
 │
-├── .env
-└── docker-compose.yaml
+├── .env                              # จัดการข้อมูลอยู่ในรูปตัวแปร ที่ต้องการเก็บเป็นความลับ
+└── docker-compose.yaml               # Docker container ที่จะรัน Service แบบทีละหลายบน Airflow
 ```
