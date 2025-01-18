@@ -27,7 +27,7 @@ etl-pipeline-with-airflow-in-docker/
 │   └── requirements.txt
 │
 ├── scripts/                          # โฟลเดอร์สำหรับเก็บไฟล์โค้ด python function เพิ่มเติมที่จะรันผ่าน Dags
-│   └── slack_client.py
+│   └── slack_notify.py
 │
 ├── .env                              # จัดการข้อมูลอยู่ในรูปตัวแปร ที่ต้องการเก็บเป็นความลับ
 └── docker-compose.yaml               # Docker container ที่จะรัน Service แบบทีละหลายบน Airflow
