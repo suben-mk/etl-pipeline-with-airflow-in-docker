@@ -6,7 +6,7 @@ _**Technology stack :** Python, Docker, Apache Airflow, Cloud Storage, BigQuery,
 ## Project Overview
 ![Pipeline Overview](https://github.com/user-attachments/assets/ef352ab0-9fc7-49ea-aeee-61f6556d2e2e)
 
-## Folder Explaination
+## Folder Structure and Explaination
 ```bash
 etl-pipeline-with-airflow-in-docker/
 ├── assets/                           # โฟลเดอร์สำหรับเก็บรูปภาพต่างๆ ของโปรเจค
