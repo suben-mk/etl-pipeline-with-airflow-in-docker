@@ -35,14 +35,18 @@ etl-pipeline-with-airflow-in-docker/
 └── docker-compose.yaml               # Docker container ที่จะรัน Service แบบทีละหลายบน Airflow
 ```
 
-## Data Pipeline Orchestration
+### Data Pipeline Orchestration
 ![DAGs-Graph-2](https://github.com/user-attachments/assets/56e0a0b4-eb02-4e3e-b341-5ffeec9ecb7a)
 
-## Cloud Storage
+### Cloud Storage
 ![GCS](https://github.com/user-attachments/assets/e1aef720-0b27-4340-91a4-acfc111ada5b)
 
-## BigQuery
+### BigQuery
 ![BQ1](https://github.com/user-attachments/assets/4964c78f-fae6-43bc-a39e-5ec372ea2c05)
 
-## Slack Notification
+### Slack Notification
 ![Slack](https://github.com/user-attachments/assets/7f2684f7-a137-4551-9ece-a0d7b98974fb)
+
+## Reference
+* Road to Data Engineer 2.0 (2023) จาก [DataTH School](https://school.datath.com/)
+* คุณบีท ปุณณ์สิริ บุณยเกียรติ Special Live หัวข้อเรื่อง [DataTH] Data Quality with Apache Airflow [GitHub](https://github.com/punsiriboo/data-quality-with-apache-airflow)
