@@ -35,12 +35,17 @@ etl-pipeline-with-airflow-in-docker/
 
 ## Workflow
 _**Technology stack :** Python, Docker, Apache Airflow, Cloud Storage, BigQuery, Slack_\
-_**DAGs script :**_ [r2de2_workshop_sbmk.py](https://github.com/suben-mk/etl-pipeline-with-airflow-in-docker/blob/main/dags/r2de2_workshop_sbmk.py)
+_**Docker-Compose :**_ [docker-compose.yaml](https://github.com/suben-mk/etl-pipeline-with-airflow-in-docker/blob/main/docker-compose.yaml)\
+_**DAGs script :**_ [r2de2_workshop_sbmk.py](https://github.com/suben-mk/etl-pipeline-with-airflow-in-docker/blob/main/dags/r2de2_workshop_sbmk.py)\
+_**Slack script :**_ [slack_notify.py](https://github.com/suben-mk/etl-pipeline-with-airflow-in-docker/blob/main/scripts/slack_notify.py)
 
-  1. Setup environment ของ Local Airflow บน Docker ซึ่งโครงสร้างโฟล์เดอร์จะตามที่แสดงรูปด้านบน และ Google Cloud Platform ซึ่งสร้าง GCP Project, GCS Bucket, BigQuery Dataset, Service Account เพื่อการเข้าถึงของ Local Airflow
-  2. รันไฟล์ docker-compose.yaml เพื่อที่จะเข้าไปรัน Data Pipeline บน Local Airflow server
-  3. Setup conection SQLite บน Local Airflow server เชื่อมกับไฟล์ database (.db) บนเครื่อง Local
-  4. รัน DAGs
+  1. Setup environment ดังนี้\
+     1.1 Local Airflow บน Docker ซึ่งโครงสร้างโฟล์เดอร์จะตามที่แสดงรูปด้านบน\
+     1.2 Google Cloud Platform ซึ่งสร้าง GCP Project, GCS Bucket, BigQuery Dataset, Service Account เพื่อการเข้าถึงของ Local Airflow\
+     1.3 Slack API สร้าง Your application และ generate incoming webhook URLs
+  3. รันไฟล์ docker-compose.yaml เพื่อที่จะเข้าไปรัน Data Pipeline บน Local Airflow server
+  4. Setup conection SQLite บน Local Airflow server เชื่อมกับไฟล์ database (.db) บนเครื่อง Local
+  5. รัน DAGs
      
      _**Data Pipeline Orchestration**_
      ![DAGs-Graph-2](https://github.com/user-attachments/assets/56e0a0b4-eb02-4e3e-b341-5ffeec9ecb7a)
