@@ -39,7 +39,7 @@ _**Docker-Compose :**_ [docker-compose.yaml](https://github.com/suben-mk/etl-pip
 _**DAGs script :**_ [r2de2_workshop_sbmk.py](https://github.com/suben-mk/etl-pipeline-with-airflow-in-docker/blob/main/dags/r2de2_workshop_sbmk.py)\
 _**Slack script :**_ [slack_notify.py](https://github.com/suben-mk/etl-pipeline-with-airflow-in-docker/blob/main/scripts/slack_notify.py)
 
-  1. Setup environment ดังนี้\
+  1. Setup environment ดังนี้
      * Local Airflow บน Docker ซึ่งโครงสร้างโฟล์เดอร์จะตามที่แสดงรูปด้านบน
      * Google Cloud Platform ซึ่งสร้าง GCP Project, GCS Bucket, BigQuery Dataset, Service Account เพื่อการเข้าถึงของ Local Airflow
      * Slack API สร้าง Your application และ generate incoming webhook URLs
