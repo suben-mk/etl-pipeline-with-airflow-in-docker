@@ -1,8 +1,6 @@
 # ETL Data Pipeline with Airflow in Docker
 จาก Workshop คอร์สเรียนออนไลน์ Road to Data Engineer 2023 โปรเจคนี้ผู้เขียนต้องการเปลี่ยนการจัดการ Apache Airflow ผ่าน Google Cloud Composer เป็นการรัน Apache Airflow บน Docker แทน และแจ้งเตือนเข้า Slack กรณีรัน Task สำเร็จและไม่เสร็จ
 
-_**Technology stack :** Python, Docker, Apache Airflow, Cloud Storage, BigQuery, Slack_
-
 ## Project Overview
 ![Pipeline Overview](https://github.com/user-attachments/assets/ef352ab0-9fc7-49ea-aeee-61f6556d2e2e)
 
@@ -35,17 +33,26 @@ etl-pipeline-with-airflow-in-docker/
 └── docker-compose.yaml               # Docker container ที่จะรัน Service แบบทีละหลายบน Airflow
 ```
 
-### Data Pipeline Orchestration
-![DAGs-Graph-2](https://github.com/user-attachments/assets/56e0a0b4-eb02-4e3e-b341-5ffeec9ecb7a)
+## Workflow
+_**Technology stack :** Python, Docker, Apache Airflow, Cloud Storage, BigQuery, Slack_\
+_**DAGs script :**_ [r2de2_workshop_sbmk.py](https://github.com/suben-mk/etl-pipeline-with-airflow-in-docker/blob/main/dags/r2de2_workshop_sbmk.py)
 
-### Cloud Storage
-![GCS](https://github.com/user-attachments/assets/e1aef720-0b27-4340-91a4-acfc111ada5b)
+  1. Setup environment ของ Local Airflow บน Docker ซึ่งโครงสร้างโฟล์เดอร์จะตามที่แสดงรูปด้านบน และ Google Cloud Platform ซึ่งสร้าง GCP Project, GCS Bucket, BigQuery Dataset, Service Account เพื่อการเข้าถึงของ Local Airflow
+  2. รันไฟล์ docker-compose.yaml เพื่อที่จะเข้าไปรัน Data Pipeline บน Local Airflow server
+  3. Setup conection SQLite บน Local Airflow server เชื่อมกับไฟล์ database (.db) บนเครื่อง Local
+  4. รัน DAGs
+     
+     _**Data Pipeline Orchestration**_
+     ![DAGs-Graph-2](https://github.com/user-attachments/assets/56e0a0b4-eb02-4e3e-b341-5ffeec9ecb7a)
 
-### BigQuery
-![BQ1](https://github.com/user-attachments/assets/4964c78f-fae6-43bc-a39e-5ec372ea2c05)
+     _**Cloud Storage**_
+     ![GCS](https://github.com/user-attachments/assets/e1aef720-0b27-4340-91a4-acfc111ada5b)
 
-### Slack Notification
-![Slack](https://github.com/user-attachments/assets/7f2684f7-a137-4551-9ece-a0d7b98974fb)
+     _**BigQuery**_
+     ![BQ1](https://github.com/user-attachments/assets/4964c78f-fae6-43bc-a39e-5ec372ea2c05)
+
+     _**Slack Notification**_
+     ![Slack](https://github.com/user-attachments/assets/7f2684f7-a137-4551-9ece-a0d7b98974fb)
 
 ## Reference
 * Road to Data Engineer 2.0 (2023) จาก [DataTH School](https://school.datath.com/)
