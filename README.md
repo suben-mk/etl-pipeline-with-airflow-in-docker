@@ -2,7 +2,7 @@
 จาก Workshop คอร์สเรียนออนไลน์ Road to Data Engineer 2023 โปรเจคนี้ผู้เขียนต้องการเปลี่ยนการจัดการ Apache Airflow ผ่าน Google Cloud Composer เป็นการรัน Apache Airflow บน Docker แทน และแจ้งเตือนเข้า Slack กรณีรัน Task สำเร็จและไม่เสร็จ
 
 ## Project Overview
-![Pipeline Overview](https://github.com/user-attachments/assets/ef352ab0-9fc7-49ea-aeee-61f6556d2e2e)
+![ETL Airflow Docker Diagram](https://github.com/user-attachments/assets/e9c8e55b-4bf4-4459-ad87-d33c8631c118)
 
 ## Folder Structure and Explaination
 ```bash
@@ -30,7 +30,7 @@ etl-pipeline-with-airflow-in-docker/
 │   └── slack_notify.py
 │
 ├── .env                              # จัดการข้อมูลอยู่ในรูปตัวแปร ที่ต้องการเก็บเป็นความลับ
-└── docker-compose.yaml               # Docker container ที่จะรัน Service แบบทีละหลายบน Airflow
+└── docker-compose.yaml               # Docker container ที่จะรัน Service แบบทีละหลายตัวบน Airflow
 ```
 
 ## Workflow
@@ -47,18 +47,18 @@ _**Slack script :**_ [slack_notify.py](https://github.com/suben-mk/etl-pipeline-
   4. Setup conection SQLite บน Local Airflow server เชื่อมกับไฟล์ database (.db) บนเครื่อง Local
   5. รัน DAGs
      
-     _**Data Pipeline Orchestration**_
      ![DAGs-Graph-2](https://github.com/user-attachments/assets/56e0a0b4-eb02-4e3e-b341-5ffeec9ecb7a)
+      _Data Pipeline Orchestration_
 
-     _**Cloud Storage**_
      ![GCS](https://github.com/user-attachments/assets/e1aef720-0b27-4340-91a4-acfc111ada5b)
+     _Cloud Storage_
 
-     _**BigQuery**_
      ![BQ1](https://github.com/user-attachments/assets/4964c78f-fae6-43bc-a39e-5ec372ea2c05)
+     _BigQuery_
 
-     _**Slack Notification**_
      ![Slack](https://github.com/user-attachments/assets/7f2684f7-a137-4551-9ece-a0d7b98974fb)
+     _Slack Notification_
 
-## Reference
+## References
 * Road to Data Engineer 2.0 (2023) จาก [DataTH School](https://school.datath.com/)
 * คุณบีท ปุณณ์สิริ บุณยเกียรติ Special Live หัวข้อเรื่อง [DataTH] Data Quality with Apache Airflow [GitHub](https://github.com/punsiriboo/data-quality-with-apache-airflow)
